@@ -20,10 +20,10 @@
 
 
 <h2>コメント</h2>
-<% @post.comments.each do |comment| %>
+<% @post.comments.each do |c| %>
   <p>
-    <%= comment.commenter %>: <%= comment.body %>
-    <%= link_to "削除", [comment.post, comment], confirm: "よろしいですか？", method: :delete %>
+    <%= c.commenter %>: <%= c.body %>
+    <%= link_to "削除", [c.post, c], confirm: "よろしいですか？", method: :delete %>
   </p>
 <% end %>
 
